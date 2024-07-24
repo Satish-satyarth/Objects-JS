@@ -15,6 +15,19 @@ const userNme = {
     [mysys] : "Satyarth",
 }
 
-console.log(userNme.college);
-console.log(userNme["Full name"]);  // Special case 
-console.log(userNme[mysys]);
+// console.log(userNme.college);
+// console.log(userNme["Full name"]);  // Special case 
+// console.log(userNme[mysys]);
+
+userNme.age = 24;
+// console.log(userNme);
+
+// Object.freeze(userNme);  // After using freeze method we can't update
+
+userNme.email_id = "satishyadav@gmail.com"
+// console.log(userNme)
+
+userNme.greeting = function(){
+    console.log(`hello satish , ${this.college}`);
+}
+console.log(userNme.greeting());
